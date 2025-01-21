@@ -1,3 +1,16 @@
-body{
+/* body{
     background-color: pink;
+} */
+
+.navbar {
+  height: 4rem;
+  background-color: white;
+
+}
+.fa-solid {
+  color: #fe424d;
+  font-size: 2rem;
+}
+.nav-link {
+  color: black !important;
 }
