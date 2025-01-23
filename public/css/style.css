@@ -13,6 +13,8 @@
 .nav-link {
   color: black !important;
 }
+
+
 /* .footer */
 .f-info-links a {
   text-decoration: none;
@@ -48,13 +50,10 @@
   align-items: space-evenly;
 }
 
-
 /* cards */
 .card{
   border:none !important;
   margin-bottom: 2rem;
-
-
 }
 .card-img-top{
   border-radius: 1rem !important;
@@ -66,7 +65,6 @@ object-fit: cover !important;
 }
 .card-text p{
   font-weight: 400 !important;
-
 }
 .listing-link{
   text-decoration: none;
@@ -74,9 +72,10 @@ object-fit: cover !important;
 
 /* Card effect */
 .card-img-overlay{
-  opacity: 0;
-}
-.card-img-overlay:hover{
   opacity: 0.2;
   background-color: white;
+}
+
+.card-img-overlay:hover{
+  opacity: 0;
 }
