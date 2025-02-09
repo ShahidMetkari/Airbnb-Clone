@@ -2,7 +2,8 @@
 <div class="row">
   <div class="col-8 offset-2">
     <h3>Create a new listing</h3>
-    <form method="POST" action="/listings">
+    <form method="POST" action="/listings" novalidate class="needs-validation">
+      <!-- in above line , to ADD VALIDATION in form we have written novalidate and bootstrap class name -->
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input
@@ -10,12 +11,21 @@
           class="form-control"
           name="listing[title]"
           placeholder="enter title"
+          required
         />
+        <!-- required is to set field as required -->
+        <div class="valid-feedback">Title looks good!</div>
+        <div class="invalid-feedback">Enter a valid title</div>
       </div>
 
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <textarea name="listing[description]" class="form-control"></textarea>
+        <textarea
+          name="listing[description]"
+          class="form-control"
+          required
+        ></textarea>
+        <div class="invalid-feedback">enter valid description</div>
       </div>
       <div class="mb-3">
         <label for="image" class="form-label">Image Link</label>
@@ -24,16 +34,35 @@
       <div class="row">
         <div class="mb-3 col-4">
           <label for="price">Price</label>
-          <input type="number" name="listing[price]" class="form-control" />
+          <input
+            type="number"
+            name="listing[price]"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Enter a valid price</div>
         </div>
         <div class="mb-3 col-md-8">
           <label for="country">Country</label>
-          <input type="text" name="listing[country]" class="form-control" />
+          <input
+            type="text"
+            name="listing[country]"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Enter a valid country</div>
         </div>
       </div>
       <div class="mb-3">
         <label for="location">Location</label>
-        <input type="text" name="listing[location]" class="form-control" />
+        <input
+          type="text"
+          name="listing[location]"
+          class="form-control"
+          required
+        />
+        <!-- below div is used to display success and failure text if a form gets validation error -->
+        <div class="invalid-feedback">Enter a valid location</div>
       </div>
 
       <button class="btn btn-dark add-btn">Add</button>
