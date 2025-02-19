@@ -75,4 +75,16 @@ project-phase-1/
    - View listing details
    - Delete listings
 
+## Deployment on Netlify
 
+1. Push your code to a GitHub repository
+2. Create a new site on Netlify and connect your GitHub repository
+3. Set up environment variables in Netlify:
+   - MONGO_URL: Your MongoDB connection string
+   - PORT: 3000 (or your preferred port)
+4. Configure build settings:
+   - Build command: `npm install && npm run build`
+   - Publish directory: `public`
+5. Deploy your application
+
+.
